@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+
+{% block beforeContent %}
+  {% include "includes/phase-banner.html" %}
+{% endblock %}
+
+
+
+
+{% block content %}
+
+<h1 class="govuk-heading-l">
+  You can’t use this service
+</h1>
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <p>
+        You need to know the claim amount to use this service.
+      </p>
+
+      <p>
+        If you can’t calculate the claim amount, for example because you’re claiming for an injury or accident, use the<a href="#"> N1 paper form (opens in a new window)</a>.
+      </p>
+
+
+
+
+
+
+
+            {% include "includes/where-to-send-paper-forms.html" %}
+
+            {% include "includes/contact-us-for-help.html" %}
+
+
+
+      <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+
+
+          </div>
+        </div>
+    </div>
+
+
+  </div>
+{% endblock %}

@@ -1,0 +1,58 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Make a money claim online
+      </h1>{{releaseVersion | log }}
+      <p>
+        You can make a money claim if you think a person or organisation owes you money and will not pay you back. You’ll have to pay a fee.
+      </p>
+
+      <p>
+        Before making a claim, contact the person or organisation to try to resolve the issue by discussion or mediation.
+      </p>
+
+
+      <div class="govuk-inset-text">
+        You cannot make a claim if you’re told that the person owing you money has protection from creditors through the ‘Breathing Space’ scheme. Find out what to do when someone is using the ‘Breathing Space’ scheme.
+      </div>
+
+
+      <p>
+        Your claim, including your name and address, will be sent to the person you say owes you money. They’ll get a chance to respond to your claim.
+      </p>
+
+      <div class="govuk-inset-text">
+        To make a money claim in Welsh, download and fill in form N1.
+      </div>
+
+
+      <h2 class="govuk-heading-m">Return to an existing claim</h2>
+
+      <p>We recommend you add links to your prototype to this page, rather than delete it.
+        You'll find this page in the kit at '/app/views/index.html'.</p>
+
+      <p>You can change the service name by editing the file '/app/config.js'.</p>
+
+      <h2 class="govuk-heading-m">Examples and documentation</h2>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          <a href="/docs/tutorials-and-examples">Example pages and documentation</a>
+        </li>
+        <li>
+          <a href="https://design-system.service.gov.uk">GOV.UK Design System</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+{% endblock %}

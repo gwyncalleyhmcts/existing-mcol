@@ -1,0 +1,95 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+
+{% block beforeContent %}
+  {% include "includes/phase-banner.html" %}
+{% endblock %}
+
+
+
+
+{% block content %}
+
+<div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+  <h2 class="govuk-error-summary__title" id="error-summary-title">
+    There is a problem
+  </h2>
+  <div class="govuk-error-summary__body">
+    <ul class="govuk-list govuk-error-summary__list">
+      <li>
+        <a href="#passport-issued-day">The date your passport was issued must be in the past</a>
+      </li>
+      <li>
+        <a href="#postcode-input">Enter a postcode, like AA1 1AA</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <h1 class="govuk-heading-l">
+        Total amount you’re claiming
+      </h1>
+
+
+      <p>
+        If you’re claiming interest, include that in the amount.
+      </p>
+
+      <form action="/claim-value-answer" method="post" novalidate>
+
+
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="claim-value-hint">
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="claim-value-over-10000" name="claim-value-question" type="radio" value="claim-value-over-10000">
+                <label class="govuk-label govuk-radios__label" for="claim-value-over-10000">
+                  Over £10,000
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="claim-value-under-10000" name="claim-value-question" type="radio" value="claim-value-under-10000">
+                <label class="govuk-label govuk-radios__label" for="claim-value-under-10000">
+                  £10,000 or less
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="claim-value-not-known" name="claim-value-question" type="radio" value="claim-value-not-known">
+                <label class="govuk-label govuk-radios__label" for="claim-value-not-known">
+                  I don’t know the amount
+                </label>
+              </div>
+            </div>
+
+          </fieldset>
+        </div>
+
+
+        <input type="hidden" name="answers-checked" value="true">
+
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Save and continue
+        </button>
+
+      </form>
+
+
+      {% include "includes/contact-us-for-help.html" %}
+
+
+
+
+    </div>
+
+
+  </div>
+{% endblock %}

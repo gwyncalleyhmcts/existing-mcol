@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+
+{% block beforeContent %}
+  {% include "includes/phase-banner.html" %}
+{% endblock %}
+
+
+
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+    <h1 class="govuk-heading-l">
+      Is this claim against more than one person or organisation?
+    </h1>
+
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+
+        <form action="/single-defendant-answer" method="post" novalidate>
+
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="single-defendant-hint">
+              <div class="govuk-radios govuk-radios--inline">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="yes" name="single-defendant-question" type="radio" value="yes">
+                  <label class="govuk-label govuk-radios__label" for="ineligible-multiple-defendants">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="no" name="single-defendant-question" type="radio" value="no">
+                  <label class="govuk-label govuk-radios__label" for="defendant-address">
+                    No
+                  </label>
+                </div>
+              </div>
+
+            </fieldset>
+          </div>
+
+
+
+
+
+            <input type="hidden" name="answers-checked" value="true">
+
+            <button type="submit" class="govuk-button" data-module="govuk-button">
+              Save and continue
+            </button>
+
+        </form>
+
+
+        {% include "includes/contact-us-for-help.html" %}
+
+
+
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+
+</div>
+
+{% endblock %}

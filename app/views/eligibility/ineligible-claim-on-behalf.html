@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+
+{% block beforeContent %}
+  {% include "includes/phase-banner.html" %}
+{% endblock %}
+
+
+
+
+{% block content %}
+
+<h1 class="govuk-heading-l">
+  You can’t use this service
+</h1>
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <p>
+        This service is currently for claimants representing themselves.
+      </p>
+
+      <p>
+        <a href="#">If you’re a legal representative use the Money Claim Online (MCOL) service (opens in a new window)</a> or <a href="#">download a paper form (opens in a new window)</a>, complete and return it to make your claim.
+      </p>
+
+
+
+
+
+
+
+            {% include "includes/where-to-send-paper-forms.html" %}
+
+            {% include "includes/contact-us-for-help.html" %}
+
+
+
+      <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+
+
+          </div>
+        </div>
+    </div>
+
+
+  </div>
+{% endblock %}

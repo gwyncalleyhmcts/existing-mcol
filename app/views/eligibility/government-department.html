@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+
+{% block beforeContent %}
+  {% include "includes/phase-banner.html" %}
+{% endblock %}
+
+
+
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+    <h1 class="govuk-heading-l">
+      Are you claiming against a government department?
+    </h1>
+
+
+    <p>
+      <a href="#">See a list of government departments (opens in a new window)</a>.
+    </p>
+
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+
+        <form action="/government-department-answer" method="post" novalidate>
+
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="government-department-hint">
+              <div class="govuk-radios govuk-radios--inline">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="yes" name="government-department-question" type="radio" value="yes">
+                  <label class="govuk-label govuk-radios__label" for="yes">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="no" name="government-department-question" type="radio" value="no">
+                  <label class="govuk-label govuk-radios__label" for="no">
+                    No
+                  </label>
+                </div>
+              </div>
+
+            </fieldset>
+          </div>
+
+
+
+
+
+            <input type="hidden" name="answers-checked" value="true">
+
+            <button type="submit" class="govuk-button" data-module="govuk-button">
+              Save and continue
+            </button>
+
+        </form>
+
+
+        {% include "includes/contact-us-for-help.html" %}
+
+
+
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+
+</div>
+
+{% endblock %}

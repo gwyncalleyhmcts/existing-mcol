@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+
+{% block beforeContent %}
+  {% include "includes/phase-banner.html" %}
+{% endblock %}
+
+
+
+
+{% block content %}
+
+<h1 class="govuk-heading-l">
+  Try the new online service
+</h1>
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <p>
+        We’re building a new service which is currently in beta. This means we’re testing different designs and making changes based on feedback from users.
+      </p>
+
+      <p>
+        We’ll ask you some questions to check you can use the new service.
+      </p>
+
+
+      <p>
+        You can still use <a href="#">Money Claim Online (MCOL)</a> if you prefer while we’re testing the new service.
+      </p>
+
+
+      <form action="/eligibility/claim-value" method="post" novalidate>
+
+        <input type="hidden" name="answers-checked" value="true">
+
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+
+      </form>
+
+
+
+      {% include "includes/contact-us-for-help.html" %}
+
+
+
+
+      <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+
+
+          </div>
+        </div>
+    </div>
+
+
+  </div>
+{% endblock %}

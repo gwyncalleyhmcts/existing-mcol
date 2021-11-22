@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+
+{% block beforeContent %}
+  {% include "includes/phase-banner.html" %}
+{% endblock %}
+
+
+
+
+{% block content %}
+
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <h1 class="govuk-heading-l">
+        Do you believe the person you’re claiming against is 18 or over?
+      </h1>
+
+
+
+      <form action="/defendant-age-answer" method="post" novalidate>
+
+
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="defendant-age-hint">
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="over-18" name="defendant-age-question" type="radio" value="over-18">
+                <label class="govuk-label govuk-radios__label" for="over-18">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="under-18" name="defendant-age-question" type="radio" value="under-18">
+                <label class="govuk-label govuk-radios__label" for="under-18">
+                  No
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="company" name="defendant-age-question" type="radio" value="company">
+                <label class="govuk-label govuk-radios__label" for="company">
+                  I’m claiming against a company or organisation
+                </label>
+              </div>
+            </div>
+
+          </fieldset>
+        </div>
+
+
+        <input type="hidden" name="answers-checked" value="true">
+
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Save and continue
+        </button>
+
+      </form>
+
+
+      {% include "includes/contact-us-for-help.html" %}
+
+
+
+
+    </div>
+
+
+  </div>
+{% endblock %}

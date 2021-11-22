@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+
+{% block beforeContent %}
+  {% include "includes/phase-banner.html" %}
+{% endblock %}
+
+
+
+
+{% block content %}
+
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <h1 class="govuk-heading-l">
+        Who are you making the claim for?
+      </h1>
+
+
+
+      <form action="/claim-type-answer" method="post" novalidate>
+
+
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="claim-type-hint">
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="claim-type-myself" name="claim-type-question" type="radio" value="claim-type-myself">
+                <label class="govuk-label govuk-radios__label" for="claim-type-myself">
+                  Just myself or my organisation
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="claim-type-more-than-one" name="claim-type-question" type="radio" value="claim-type-more-than-one">
+                <label class="govuk-label govuk-radios__label" for="claim-type-more-than-one">
+                  More than one person or organisation
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="claim-type-solicitor" name="claim-type-question" type="radio" value="claim-type-solicitor">
+                <label class="govuk-label govuk-radios__label" for="claim-type-solicitor">
+                  A client - I’m their solicitor
+                </label>
+              </div>
+            </div>
+
+          </fieldset>
+        </div>
+
+
+        <input type="hidden" name="answers-checked" value="true">
+
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Save and continue
+        </button>
+
+      </form>
+
+
+      {% include "includes/contact-us-for-help.html" %}
+
+
+
+
+    </div>
+
+
+  </div>
+{% endblock %}

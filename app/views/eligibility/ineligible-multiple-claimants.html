@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Start page example
+{% endblock %}
+
+
+{% block beforeContent %}
+  {% include "includes/phase-banner.html" %}
+{% endblock %}
+
+
+
+
+{% block content %}
+
+<h1 class="govuk-heading-l">
+  You can’t use this service
+</h1>
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <p>
+        You can’t use this service if more than one person or organisation is making the claim.
+      </p>
+
+      <p>
+        <a href="#">Download a paper form (opens in a new window)</a>, complete it and return it to make your claim.
+      </p>
+
+
+
+
+
+
+      {% include "includes/where-to-send-paper-forms.html" %}
+
+      {% include "includes/contact-us-for-help.html" %}
+
+
+
+
+      <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+
+
+          </div>
+        </div>
+    </div>
+
+
+  </div>
+{% endblock %}
